@@ -1,2 +1,2 @@
-# dog-genomics
+# Dog genomics 
  Biocomputing project
