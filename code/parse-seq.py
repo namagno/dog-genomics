@@ -6,7 +6,14 @@ import numpy as np
 
 # Load sequence data and parse FASTA
 
-for seq_record in SeqIO.parse("../data/dog_breeds.fa", "fasta"):
+# When you have generated your MAFFT profile multiple sequence alignment, specify your file path accordingly
+msa = r"C:\Users\neil_\Documents\GitHub\dog-genomics\data\mafft_alignments\second_MSA.aln"
+
+
+# Generate alignment file output and check details
+read_aln = AlignIO.read(msa, "clustal")
+
+for seq_record in SeqIO.parse(msa, "fasta"):
     print(seq_record.id)
     print(repr(seq_record.seq))
     print(len(seq_record))
