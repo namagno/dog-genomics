@@ -20,6 +20,7 @@ Numpy is a requirement for Biopython to operate and I have used it to manipulate
 
 I have used Anaconda Navigator as an easy way to manage my environments and I have exported my dog_genomics package dependencies into a YAML file (env.yml) listing what will need to be configured to sucessfully run my python code "seq_matcher.py". It's worth noting that you will need to have the latest version of Biopython (1.80) installed for my code to run. If you are working in an anaconda environment, the conda installation route only fetches up to version 1.78. You will need to install Biopython 1.80 directly from your commandline using pip (https://biopython.org/wiki/Download). 
 
+I have run the python code using the command prompt within my annaconda environment (as per the YAML specs) and it is fully functional.   
 
 ## How to Use the Project
 
@@ -30,7 +31,6 @@ This project contains a standalone piece of python code intended to be run withi
 • Stretch Goal 2: Reconstructed phylogeny
 
 I have included documentation in my code and in brackets (i.e. Output, Stretch Goal 1 or Stretch Goal 2) which objective I am trying to solve at that instance. 
-
 
 ## Issues and future improvements
 
