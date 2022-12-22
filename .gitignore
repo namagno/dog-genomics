@@ -2,3 +2,5 @@
 /data/.ipynb_checkpoints/*
 /code/.ipynb_checkpoints/*
 /dog-genomics/.ipynb_checkpoints/*
+.ipynb_checkpoints/env-checkpoint.yml
+.ipynb_checkpoints/README-checkpoint.md
