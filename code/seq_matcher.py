@@ -1,13 +1,12 @@
-# Load modules and import libraries
+# Import necessary libraries and load modules
 
 import Bio as Bio
+
 from Bio import SeqIO
 from Bio import AlignIO
 from Bio import Phylo
-
 from Bio import Align
 from Bio.Seq import Seq
-
 from Bio.Phylo.TreeConstruction import DistanceCalculator
 from Bio.Phylo.TreeConstruction import DistanceTreeConstructor
 
@@ -26,7 +25,7 @@ def load_alignment_get_distance(file:str):
     ### Output:
     ###        A Biopython DistanceMatrix (Bio.Phylo.TreeConstruction.DistanceMatrix) and distance calculator
         
-    # Load the multiple seqcence alignment file
+    # Load the multiple sequence alignment file
     read_aln = AlignIO.read(file, "clustal")
     
     # Initialise DNA distance calculator
@@ -245,7 +244,6 @@ def draw_ascii_tree(nj_tree):
     
     # Basic ascii tree representation displayed on terminal (Stretch Goal 2)
     return(Phylo.draw_ascii(nj_tree))
-    
 
 if __name__ == '__main__':
     
