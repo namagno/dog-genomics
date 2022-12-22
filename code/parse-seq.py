@@ -122,8 +122,8 @@ def prepare_seqs(msa):
     
     
     # Writing the new sequence pair to a new output file
-    SeqIO.write(seq_1, "../output/KM061522", "fasta") 
-    SeqIO.write(seq_2, "../output/AY656744", "fasta")
+    SeqIO.write(seq_1, "../output/KM061522.fasta", "fasta") 
+    SeqIO.write(seq_2, "../output/AY656744.fasta", "fasta")
                 
     
 def pairwise_alignment():
@@ -154,8 +154,8 @@ def pairwise_alignment():
     aligner.mismatch_score = 0
     
     for compare in aligner.align(input_1.seq, input_2.seq):
-        print("Nucleotides matched = %.1f:" % compare.score)
-        print(compare)
+        print("Nucleotides matched in sequence = %.1f" % compare.score)
+        print("\nA pairwise sequence alignment has been generated in the output folder.\n") # compare, maybe save this to output
         break
 
     seq_match = compare.score
@@ -179,7 +179,7 @@ def alignment_match_score(input_1, seq_match):
    
     pct_match = (seq_match/seq_len)*100
     
-    return(print(f"Mystery sequence (KM061522) has a {pct_match:.2f}% match with AY656744"))
+    return(print(f"Mystery sequence (KM061522) has a {pct_match:.2f}% match with AY656744.1 (English Springer Spaniel)\n\n"))
 
 def construct_phylo_tree(cal_dist, dm):  
     
@@ -197,12 +197,12 @@ def construct_phylo_tree(cal_dist, dm):
     
     # Plot a neighbour joining tree from constructor and distance matrix
 
-    fig = plt.figure(figsize=(25, 60), dpi=300)
+    fig = plt.figure(figsize=(100, 100), dpi=300, layout="constrained")
 
     #plt.subplots(layout="constrained")
-    matplotlib.rc("font", size=13)
-    matplotlib.rc("xtick", labelsize=15)
-    matplotlib.rc("ytick", labelsize=15)
+    matplotlib.rc("font", size=2)
+    matplotlib.rc("xtick", labelsize=2)
+    matplotlib.rc("ytick", labelsize=2)
     
     # Sort clades according to terminal nodes
     nj_tree.ladderize()
@@ -255,10 +255,11 @@ if __name__ == '__main__':
     # Closest match in distance matrix df depnding on ID input
     mystery_match = seq_match_in_df(orgDF, match_seq)
 
-    print(f"The closest related dog to our mystery sequence is: {mystery_match}")
-    print("Loading sequence data. Starting to append sequence closest to the mystery seqeunce")
+    print(f"\nThe closest related dog to our mystery sequence is: {mystery_match} \n")
+    print("Loading sequence data... \n\nAppending sequence closest to the mystery sequence... \n")
+    #
     prepare_seqs(msa)
-    print("Sequences successfully appended and saved into output folder.")
+    print("Sequences successfully appended and saved into the output folder. \n")
     
     # 
     input_1, seq_match = pairwise_alignment()
