@@ -28,11 +28,11 @@ I have run my python code "seq_matcher.py" using the command prompt within my an
 
 This project contains a standalone piece of python code intended to be run within the confines of this project folder, to meet the objectives set out by the Biocomputing module, which are:
 
-##### Output: Closest sequence to "Mystery" sequence, and the difference
+#### Output: Closest sequence to "Mystery" sequence, and the difference
 
-##### Stretch Goal 1: Probabilities
+#### Stretch Goal 1: Probabilities
 
-##### Stretch Goal 2: Reconstructed phylogeny
+#### Stretch Goal 2: Reconstructed phylogeny
 
 I have included extensive documentation for each line of my code, and in brackets, (i.e. Output, Stretch Goal 1 or Stretch Goal 2) which objective I am trying to solve at that given instance. 
 
